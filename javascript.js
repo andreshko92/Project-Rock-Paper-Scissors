@@ -22,13 +22,24 @@ let computerScore = 0;
 
 // 4. Write the logic to play a single round
 function playRound(humanChoice, computerChoice) {
-    
-
-
-    console.log round winner?
+    if (humanChoice === computerChoice) {
+        console.log("A tie!\nPlay again!")
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "scissors" && computerChoice === "paper") ||
+        (humanChoice === "paper" && computerChoice === "rock") )
+     {
+        console.log(`Human wins! ${humanChoice} beats ${computerChoice}`)
+        humanScore++;
+    } else {
+        console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`)
+        computerScore++;
+    }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
+
+// 5. Write the logic to play the entire game of 5 rounds.
