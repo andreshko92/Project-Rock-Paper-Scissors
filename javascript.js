@@ -17,8 +17,8 @@ function getHumanChoice() {
 }
 
 // 3. Your game will keep track of the players score. You will write variables to keep track of the players score.
-let humanScore = 0;
-let computerScore = 0;
+    let humanScore = 0;
+    let computerScore = 0;
 
 // 4. Write the logic to play a single round
 function playRound(humanChoice, computerChoice) {
@@ -42,4 +42,8 @@ const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
 
+
 // 5. Write the logic to play the entire game of 5 rounds.
+function playGame() {
+
+}
