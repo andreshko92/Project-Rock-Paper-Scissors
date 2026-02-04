@@ -17,11 +17,37 @@ function getHumanChoice() {
 }
 
 // 3. Your game will keep track of the players score. You will write variables to keep track of the players score.
-    let humanScore = 0;
-    let computerScore = 0;
+/*     let humanScore = 0;
+    let computerScore = 0; */
 
 // 4. Write the logic to play a single round
-function playRound(humanChoice, computerChoice) {
+/* function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("A tie!\nPlay again!")
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "scissors" && computerChoice === "paper") ||
+        (humanChoice === "paper" && computerChoice === "rock") )
+     {
+        console.log(`Human wins! ${humanChoice} beats ${computerChoice}`)
+        humanScore++;
+    } else {
+        console.log(`Computer wins! ${computerChoice} beats ${humanChoice}`)
+        computerScore++;
+    }
+} */
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+
+// 5. Write the logic to play the entire game of 5 rounds.
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log("A tie!\nPlay again!")
     } else if (
@@ -36,14 +62,4 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
-
-
-// 5. Write the logic to play the entire game of 5 rounds.
-function playGame() {
-
 }
